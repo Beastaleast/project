@@ -1,0 +1,23 @@
+.u{
+  width: 200px;
+  height: 350px;
+  padding: 11px;
+  border-radius: 6px;
+  box-shadow: 2px 2px 10px gray;
+  text-align: start;
+ 
+}
+
+.u img{
+  width: 200px;
+  height: 200px;
+}
+.comp{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 60px;
+  position: fixed;
+  left: 300px;
+  top: 112px;
+}

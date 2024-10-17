@@ -1,0 +1,50 @@
+.Home_Cards {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px;
+}
+
+.Card_Group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 70%;
+  justify-content: flex-start;
+  position: fixed;
+  right: 0;
+  top: 130px;
+}
+
+.Peoplecard {
+  background-color: #007bff;
+  border: 2px ;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  width: 150px;
+  height: 100px;
+  
+}
+
+.Peoplecard p {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+}
+
+.Peoplecard:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .Card_Group {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+}
+
+.Peoplecard {
+  padding: 15px;
+}
