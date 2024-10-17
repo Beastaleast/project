@@ -1,0 +1,23 @@
+/* .Newhead{
+display:flex;
+justify-content: space-between; 
+background-image: linear-gradient(hwb(129 48% 4%),white);
+color: orangered;
+padding: 10px;
+position:sticky;
+}
+   */
+
+.Newhead {
+  display: flex;
+  justify-content: space-between;
+  background-image: linear-gradient(hwb(39 42% 0%), white);
+  color: hsl(39, 84%, 43%);
+  padding: 5px;
+  top:0;
+
+}
+
+.img{
+  width: 20px;
+}
