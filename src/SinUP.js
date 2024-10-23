@@ -1,14 +1,13 @@
-import React from 'react'
-import HomePage from './HomePage'
-import SinUp1 from './SinUp1'
+import React from "react";
+
+import SinUp1 from "./SinUp1";
 
 function SinUP() {
   return (
     <div>
-      <HomePage/>
-      <SinUp1/>
+      <SinUp1 />
     </div>
-  )
+  );
 }
 
-export default SinUP
+export default SinUP;

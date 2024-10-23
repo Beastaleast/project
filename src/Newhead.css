@@ -1,19 +1,10 @@
-/* .Newhead{
-display:flex;
-justify-content: space-between; 
-background-image: linear-gradient(hwb(129 48% 4%),white);
-color: orangered;
-padding: 10px;
-position:sticky;
-}
-   */
-
 .Newhead {
   display: flex;
   justify-content: space-between;
   background-image: linear-gradient(hwb(129 48% 4%), white);
   color: orangered;
   padding: 10px;
-  top:0;
-
+  position: fixed;
+  top: 0px;
+  width: -webkit-fill-available;
 }

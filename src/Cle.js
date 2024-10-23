@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "./Button";
+
 
 export default function ClientTable() {
   const Cdata = {
@@ -12,7 +12,7 @@ export default function ClientTable() {
 
   return (
     <div className="table-container">
-      <Button />
+     
       <table className="client-table">
         <thead>
           <tr>
