@@ -6,6 +6,11 @@
   right: 0px;
   top: 170px;
   width: 1240px;
+
+  max-height: 400px; /* Adjust this height as needed */
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  margin-top: 20px;
 }
 
 .list_header {
