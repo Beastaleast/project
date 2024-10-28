@@ -5,7 +5,7 @@
   position: fixed;
   right: 0px;
   top: 170px;
-  width: 1240px;
+  max-width:1240px;
   max-height: 600px;
   overflow-y: auto;
   border: 1px solid #ccc;
@@ -108,4 +108,5 @@ button:hover {
   position: fixed;
   right: 0px;
   top: 145px;
+  
 }
