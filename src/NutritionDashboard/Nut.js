@@ -1,4 +1,5 @@
 import React from "react";
+import "./Nut.css";
 
 
 export default function ClientTable() {

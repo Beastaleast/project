@@ -1,4 +1,6 @@
 import React from "react";
+import "./E_Cards1.css";
+
 
 function E_Cards1(props) {
   console.log(props);

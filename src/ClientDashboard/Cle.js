@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./Cle.css";
 
 const initialClients = [
   {
