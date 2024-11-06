@@ -98,7 +98,7 @@ function ClientManagement() {
   return (
     <div>
       <div className="list_header">
-        <h1>Client List</h1>
+        <h1>Food Items</h1>
       </div>
 
       <div className="list_container">
