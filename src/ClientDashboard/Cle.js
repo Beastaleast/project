@@ -91,7 +91,7 @@ function ClientManagement() {
       .delete(APIDelete + id,{
         headers: {
           "x-api-key": "ggp-pro-ject",
-        }
+        }   
       })
       .then(function (response) {
         getData();
@@ -154,8 +154,8 @@ const getData =()=>
               <th>Plan Start</th>
               <th>Plan End</th>
               <th>Status</th>
-              <th>Actions</th>
               <th>Gender</th>
+              <th>Actions</th>
             </tr>
           </thead>
           <tbody>
