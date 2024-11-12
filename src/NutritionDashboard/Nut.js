@@ -1,5 +1,6 @@
 import React from "react";
-import Button from "./Button";
+import "./Nut.css";
+
 
 export default function ClientTable() {
   const Ndata = {
@@ -11,7 +12,7 @@ export default function ClientTable() {
 
   return (
     <div className="table-container">
-      <Button />
+    
       <table className="client-table">
         <thead>
           <tr>

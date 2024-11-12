@@ -1,20 +1,14 @@
-import "./Newhead.css";
-
-import "./Button.css";
-
-import Home1 from "./Home1";
-
-import "./Cards.css";
+import Home1 from "./StatCard/Home1";
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Nutrition from "./Nutrition";
-import Cleints_Dashboard from "./Cleints_Dashboard";
-import Food_Main from "./Food_Main";
-import E_Cards from "./E_Cards";
-import Login from "./Login";
-import SinUP from "./SinUP";
-import "./Login1.css";
-import "./SinUp1.css";
+import Nutrition from "./NutritionDashboard/Nutrition";
+import Cleints_Dashboard from "./ClientDashboard/Cleints_Dashboard";
+import Food_Main from "./FoodItemAddition/Food_Main";
+import E_Cards from "./ECommerce/E_Cards";
+import Login from "./LogIn/Login";
+import SinUP from "./SignUp/SinUP";
+
+
 
 function App() {
   return (

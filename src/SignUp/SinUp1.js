@@ -1,4 +1,5 @@
 import React from "react";
+import "./SinUp1.css";
 
 function Signup() {
   return (

@@ -1,4 +1,5 @@
 import React from "react";
+import "./Newhead.css";
 
 export default function Newhead() {
   return (

@@ -1,0 +1,112 @@
+/* General container styles */
+.list_container {
+  font-family: Arial, sans-serif;
+  display: flex;
+  position: fixed;
+  right: 0px;
+  top: 170px;
+  max-width:1240px;
+  max-height: 600px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  margin-top: 20px;
+}
+
+.list_header {
+  display: flex;
+  position: fixed;
+  left: 290px;
+  top: 100px;
+  color: #f44336;
+}
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+thead th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+  padding: 10px;
+  border-bottom: 2px solid #ddd;
+}
+
+tbody td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Row hover effect */
+tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+/* Buttons */
+button {
+  padding: 8px 15px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:first-of-type {
+  background-color: #4caf50; /* Green color for Assign Nutritionist */
+  color: white;
+}
+
+button:last-of-type {
+  background-color: #f44336; /* Red color for Delete */
+  color: white;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+    width: 100%;
+  }
+
+  th {
+    display: none;
+  }
+
+  tr {
+    margin-bottom: 15px;
+  }
+
+  td {
+    padding: 10px;
+    text-align: right;
+    position: relative;
+  }
+
+  td:before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    padding-left: 10px;
+    font-weight: bold;
+    text-align: left;
+  }
+}
+
+.search_bar {
+  position: fixed;
+  right: 0px;
+  top: 145px;
+  
+}

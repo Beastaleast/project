@@ -1,10 +1,9 @@
 import React from "react";
-import Button from "./Button";
+import "./Cards.css";
 
 function Cards() {
   return (
     <div className="Home_Cards">
-      <Button />
       <div className="Card_Group">
         <div className="Peoplecard">
           <p>11</p>
