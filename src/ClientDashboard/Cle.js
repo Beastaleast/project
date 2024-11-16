@@ -66,7 +66,7 @@ import axios from "axios";
 // ];
 
 function ClientManagement() {
-  const API = "https://my-api-rls4.vercel.app/api/getsales";
+  const API = "https://my-api-six-steel.vercel.app/getsales";
 
   const APIDelete ="https://my-api-six-xi.vercel.app/api/delete/";
 
