@@ -55,6 +55,11 @@ export default function Button() {
             <li>SignUp</li>
           </a>
         </div>
+        <div className="card">
+          <a href="/slyer">
+            <li>Flyer</li>
+          </a>
+        </div>
       </div>
     </div>
   );

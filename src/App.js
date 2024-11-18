@@ -7,7 +7,7 @@ import Food_Main from "./FoodItemAddition/Food_Main";
 import E_Cards from "./ECommerce/E_Cards";
 import Login from "./LogIn/Login";
 import SinUP from "./SignUp/SinUP";
-
+import Flyer from "./DataAddiiton/Flyer";
 
 
 function App() {
@@ -22,6 +22,7 @@ function App() {
           <Route path="/E-Commerce" element={<E_Cards />} />
           <Route path="/Login" element={<Login />} />
           <Route path="/SignUp" element={<SinUP />} />
+          <Route path="/slyer" element={<Flyer />} />
         </Routes>
       </Router>
     </div>

@@ -2,68 +2,6 @@ import React, { useState, useEffect } from "react";
 import "./Cle.css";
 import axios from "axios";
 
-// const initialClients = [
-//   {
-//     id: 1,
-//     name: "Mr. Ankit Shakya",
-//     phone: "+91-6387780207",
-//     email: "shakya738@gmail.com",
-//     nutritionist: "Azra Khan",
-//     tags: "----",
-//     service: "Comprehensive Weight Loss Plan",
-//     planStart: "Aug 6, 2024",
-//     planEnd: "Feb 2, 2025",
-//     status: "Active",
-//   },
-//   {
-//     id: 2,
-//     name: "Mr. Despendra Shakya",
-//     phone: "+91-9791821922",
-//     email: "shakyaNeha548@gmail.com",
-//     nutritionist: "Neha Shakya",
-//     tags: "----",
-//     service: "Ultimate Weight Loss Plan",
-//     planStart: "Jul 2, 2024",
-//     planEnd: "Sep 30, 2024",
-//     status: "Active",
-//   },
-//   {
-//     id: 3,
-//     name: "Mr. Despendra Shakya",
-//     phone: "+91-9791821922",
-//     email: "shakyaNeha548@gmail.com",
-//     nutritionist: "Neha Shakya",
-//     tags: "----",
-//     service: "Ultimate Weight Loss Plan",
-//     planStart: "Jul 2, 2024",
-//     planEnd: "Sep 30, 2024",
-//     status: "Active",
-//   },
-//   {
-//     id: 5,
-//     name: "Mr. Despendra Shakya",
-//     phone: "+91-9791821922",
-//     email: "shakyaNeha548@gmail.com",
-//     nutritionist: "Neha Shakya",
-//     tags: "----",
-//     service: "Ultimate Weight Loss Plan",
-//     planStart: "Jul 2, 2024",
-//     planEnd: "Sep 30, 2024",
-//     status: "Active",
-//   },
-//   {
-//     id: 2,
-//     name: "Mr. Despendra Shakya",
-//     phone: "+91-9791821922",
-//     email: "shakyaNeha548@gmail.com",
-//     nutritionist: "Neha Shakya",
-//     tags: "----",
-//     service: "Ultimate Weight Loss Plan",
-//     planStart: "Jul 2, 2024",
-//     planEnd: "Sep 30, 2024",
-//     status: "Active",
-//   },
-// ];
 
 function ClientManagement() {
   const API = "https://my-api-six-steel.vercel.app/api/getsales";
