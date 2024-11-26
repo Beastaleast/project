@@ -2,73 +2,8 @@ import React, { useState, useEffect } from "react";
 import "./Cle.css";
 import axios from "axios";
 
-// const initialClients = [
-//   {
-//     id: 1,
-//     name: "Mr. Ankit Shakya",
-//     phone: "+91-6387780207",
-//     email: "shakya738@gmail.com",
-//     nutritionist: "Azra Khan",
-//     tags: "----",
-//     service: "Comprehensive Weight Loss Plan",
-//     planStart: "Aug 6, 2024",
-//     planEnd: "Feb 2, 2025",
-//     status: "Active",
-//   },
-//   {
-//     id: 2,
-//     name: "Mr. Despendra Shakya",
-//     phone: "+91-9791821922",
-//     email: "shakyaNeha548@gmail.com",
-//     nutritionist: "Neha Shakya",
-//     tags: "----",
-//     service: "Ultimate Weight Loss Plan",
-//     planStart: "Jul 2, 2024",
-//     planEnd: "Sep 30, 2024",
-//     status: "Active",
-//   },
-//   {
-//     id: 3,
-//     name: "Mr. Despendra Shakya",
-//     phone: "+91-9791821922",
-//     email: "shakyaNeha548@gmail.com",
-//     nutritionist: "Neha Shakya",
-//     tags: "----",
-//     service: "Ultimate Weight Loss Plan",
-//     planStart: "Jul 2, 2024",
-//     planEnd: "Sep 30, 2024",
-//     status: "Active",
-//   },
-//   {
-//     id: 5,
-//     name: "Mr. Despendra Shakya",
-//     phone: "+91-9791821922",
-//     email: "shakyaNeha548@gmail.com",
-//     nutritionist: "Neha Shakya",
-//     tags: "----",
-//     service: "Ultimate Weight Loss Plan",
-//     planStart: "Jul 2, 2024",
-//     planEnd: "Sep 30, 2024",
-//     status: "Active",
-//   },
-//   {
-//     id: 2,
-//     name: "Mr. Despendra Shakya",
-//     phone: "+91-9791821922",
-//     email: "shakyaNeha548@gmail.com",
-//     nutritionist: "Neha Shakya",
-//     tags: "----",
-//     service: "Ultimate Weight Loss Plan",
-//     planStart: "Jul 2, 2024",
-//     planEnd: "Sep 30, 2024",
-//     status: "Active",
-//   },
-// ];
-
 function ClientManagement() {
-  const API = "https://my-api-six-steel.vercel.app/getsales";
-
-  const APIDelete ="https://my-api-six-xi.vercel.app/api/delete/";
+  const API = "https://my-api-six-steel.vercel.app/api/userinfo/";
 
   const [initialClients, setData] = useState([]);
 
@@ -86,12 +21,12 @@ function ClientManagement() {
 
   const deleteClient = (id) => {
     //setClients(clients.filter((client) => client.id !== id));
-//console.log(id);
+    //console.log(id);
     const res = axios
-      .delete(APIDelete + id,{
+      .delete(API + id, {
         headers: {
           "x-api-key": "ggp-pro-ject",
-        }   
+        },
       })
       .then(function (response) {
         getData();
@@ -99,18 +34,17 @@ function ClientManagement() {
       });
   };
 
-const getData =()=>
-{
-  const res = axios
-  .get(API, {
-    headers: {
-      "x-api-key": "ggp-pro-ject",
-    },
-  })
-  .then(function (response) {
-    setData(response.data);
-  });
-}
+  const getData = () => {
+    const res = axios
+      .get(API, {
+        headers: {
+          "x-api-key": "ggp-pro-ject",
+        },
+      })
+      .then(function (response) {
+        setData(response.data);
+      });
+  };
 
   const assignNutritionist = (id) => {
     const updatedClients = clients.map((client) => {
@@ -175,7 +109,7 @@ const getData =()=>
                   <button onClick={() => assignNutritionist(client.id)}>
                     Assign Nutritionist
                   </button>
-                  <button onClick={() => deleteClient(client._id)}>
+                  <button onClick={() => deleteClient(client.email)}>
                     Delete Client
                   </button>
                 </td>

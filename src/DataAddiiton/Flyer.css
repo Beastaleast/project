@@ -1,0 +1,125 @@
+.Modal-overlays {
+    background-color: #ccc;
+    
+  }
+  
+  .Modal-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .DataAdd {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+  }
+  
+  /* Align ADD Flyer button with Home */
+  .DataAddition-btn:first-of-type {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  /* Align ADD FAQ button to the right */
+  .DataAddition-btn:last-of-type {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  /* Button hover effects */
+  .DataAddition-btn:hover {
+    opacity: 0.8;
+  }
+  
+  /* Flyer and FAQ container */
+  .flyer-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    position: fixed;
+    top: 200px;
+    left: 300px;
+  }
+  
+  .flyer-item {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+  }
+  
+  /* Flyer image styling */
+  .flyer-item img {
+    max-width: 300px;
+    height: auto;
+    margin-right: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Flyer text styling */
+  .flyer-item div {
+    max-width: 500px;
+    text-align: left;
+    font-size: 16px;
+  }
+  
+  /* FAQ item styling */
+  .FAQ-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 2rem;
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* FAQ question and answer styling */
+  .FAQ-item strong {
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .FAQ-item div {
+    margin-bottom: 0.5rem;
+    font-size: 16px;
+  }
+  
+  /* Align the whole layout with Home */
+  .sidebar-align {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: fixed;
+    left: 300px;
+    top: 120px;
+  }
+  
+  .right-align {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: fixed;
+    right: 100px;
+    top: 120px;
+  }
+  
+  .faq-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    position: fixed;
+    top: 170px;
+    right: 100px;
+  }
+  

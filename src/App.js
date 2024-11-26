@@ -9,7 +9,6 @@ import Login from "./LogIn/Login";
 import SinUP from "./SignUp/SinUP";
 import Flyer from "./DataAddiiton/Flyer";
 
-
 function App() {
   return (
     <div className="App">
