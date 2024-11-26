@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gift Suggestions</title>
+    <link rel="stylesheet" href="gift.css"> 
+</head>
+<body>
+    <header>
+        <h1>Tohfa4U - Gift Suggestions</h1>
+    </header>
+
+    <section>
+        <h2>Tell Us About the Recipient</h2>
+        <form id="giftSuggestionForm">
+            <label for="relation">Relation:</label>
+            <select id="relation" name="relation" required>
+                <option value="">Select Relation</option>
+                <option value="Mother">Mother</option>
+                <option value="Father">Father</option>
+                <option value="Wife">Wife</option>
+                <option value="Husband">Husband</option>
+                <option value="Son">Son</option>
+                <option value="Daughter">Daughter</option>
+                <option value="Friend">Friend</option>
+                <option value="others">others</option>
+            </select>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required min="1">
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="">Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="occasion">Occasion:</label>
+            <input type="text" id="occasion" name="occasion" required placeholder="e.g. Birthday, Anniversary">
+
+            <label for="budget">Budget:</label>
+            <input type="number" id="budget" name="budget" required min="0" placeholder="Enter your budget">
+
+            <label for="giftType">Types of Gifts:</label>
+            <select id="giftType" name="giftType" required>
+                <option value="">Select Type</option>
+                <option value="Personalized">Personalized</option>
+                <option value="Experience">Experience</option>
+                <option value="Gadgets">Gadgets</option>
+                <option value="Accessories">Accessories</option>
+                <option value="Toys">Toys</option>
+                <option value="Clothing">Clothing</option>
+                <option value="Others">Others</option>
+            </select>
+
+            <label for="deliveryTime">How Soon You Want the Gift:</label>
+            <select id="deliveryTime" name="deliveryTime" required>
+                <option value="">Select Time Frame</option>
+                <option value="1-3 days">1-3 days</option>
+                <option value="3-7 days">3-7 days</option>
+                <option value="1 week">1 week</option>
+                <option value="2 weeks">2 weeks</option>
+                <option value="No rush">No rush</option>
+            </select>
+
+            <label for="address">Delivery Address:</label>
+            <textarea id="address" name="address" rows="4" required placeholder="Enter delivery address"></textarea>
+
+            <button type="submit">Get Gift Suggestions</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Tohfa4U.com | Find the Perfect Gift</p>
+    </footer>
+
+    <script src="gift.js"></script> \
+
+    <div class="gift-animation"></div>
+</body>
+</html>
