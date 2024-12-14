@@ -133,7 +133,11 @@ const ClientManagement = () => {
                 <td>{client.c}</td>
                 <td>{client.f}</td>
                 <td>
-                  <a href={client.image_url} target="_blank" rel="noopener noreferrer">
+                  <a
+                    href={client.image_url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     View Image
                   </a>
                 </td>
