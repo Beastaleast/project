@@ -46,6 +46,11 @@ export default function Button() {
           </a>
         </div>
         <div className="card">
+          <a href="/slyer">
+            <li>Flyer</li>
+          </a>
+        </div>
+        <div className="card">
           <a href="/Login">
             <li>Login</li>
           </a>
@@ -53,11 +58,6 @@ export default function Button() {
         <div className="card">
           <a href="/SignUp">
             <li>SignUp</li>
-          </a>
-        </div>
-        <div className="card">
-          <a href="/slyer">
-            <li>Flyer</li>
           </a>
         </div>
       </div>

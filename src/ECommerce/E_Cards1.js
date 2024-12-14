@@ -3,10 +3,10 @@ import axios from "axios";
 import "./E_Cards1.css";
 
 function E_Cards1() {
-  const APIPRODECT = "http://localhost:3001/products";
+  const APIPRODECT = "https://my-api-six-steel.vercel.app/api/products";
   const [products, setProducts] = useState([]);
 
-  // Fetch products when the component is mounted
+ 
   useEffect(() => {
     axios
       .get(APIPRODECT, {
@@ -15,7 +15,7 @@ function E_Cards1() {
         },
       })
       .then((response) => {
-        setProducts(response.data); // Store fetched data in the state
+        setProducts(response.data); 
       })
       .catch((error) => {
         console.error("Error fetching products:", error);
@@ -36,7 +36,7 @@ function E_Cards1() {
           </div>
         ))
       ) : (
-        <p>Loading products...</p> // Show a loading message while data is fetched
+        <p>Loading products...</p> 
       )}
     </div>
   );

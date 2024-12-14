@@ -10,7 +10,7 @@ const Flyer = () => {
 
   const [flyer, setFlyer] = useState(false);
   const [FAQ, setFAQ] = useState(false);
-  const [flyerdata, setFlyerdata] = useState([]); // Initialize with an empty array
+  const [flyerdata, setFlyerdata] = useState([]);
   const [FAQdata, setFAQdata] = useState([]);
 
   useEffect(() => {
@@ -25,7 +25,7 @@ const Flyer = () => {
           "x-api-key": "ggp-pro-ject",
         },
       });
-      setFlyerdata(response.data); // Correctly set the fetched data
+      setFlyerdata(response.data);
     } catch (error) {
       console.error("Error fetching flyer data:", error);
     }
@@ -38,13 +38,14 @@ const Flyer = () => {
           "x-api-key": "ggp-pro-ject",
         },
       });
-      setFAQdata(response.data); // Correctly set the fetched data
+      setFAQdata(response.data);
     } catch (error) {
       console.error("Error fetching faq data:", error);
     }
   };
-  const closeModal = () => {
+  const closeFlyer = () => {
     setFlyer(false);
+    console.log("hello");
   };
 
   const closeFAQ = () => {
@@ -57,18 +58,10 @@ const Flyer = () => {
         <button className="DataAddition-btn" onClick={() => setFlyer(true)}>
           ADD Flyer
         </button>
-        {flyer && <ShowModal closeModal={closeModal} />}
-      </div>
-
-      <div className="right-align">
-        <button className="DataAddition-btn" onClick={() => setFAQ(true)}>
-          ADD FAQ
-        </button>
-        {FAQ && <DisplayFAQ closeFAQ={closeFAQ} />}
+        {flyer && <ShowModal closeFlyer={closeFlyer} flyerdata={flyerdata} />}
       </div>
 
       <div className="flyer-container">
-        {/* Flyer Section */}
         {flyerdata.length > 0 ? (
           flyerdata.map((item, index) => (
             <div className="flyer-item" key={index}>
@@ -84,8 +77,14 @@ const Flyer = () => {
         )}
       </div>
 
+      {/* FAQ Section */}
+      <div className="right-align">
+        <button className="DataAddition-btn" onClick={() => setFAQ(true)}>
+          ADD FAQ
+        </button>
+        {FAQ && <DisplayFAQ closeFAQ={closeFAQ} FAQList={FAQList} />}
+      </div>
       <div className="faq-container">
-        {/* FAQ Section */}
         {FAQdata.length > 0 ? (
           FAQdata.map((item, index) => (
             <div className="FAQ-item" key={index}>

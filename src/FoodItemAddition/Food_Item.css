@@ -1,85 +1,115 @@
-.table-container {
-  margin: 10px;
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  height: 500px;
-}
-
-.client-table {
-  width: 80%;
-  overflow-y: auto;
-  border-collapse: collapse;
-  text-align: left;
+.client-management {
   font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
-  position: fixed;
-  right: 0;
-  top: 130px;
-  height: auto;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
 }
 
-.client-table th {
-  background-color: #4caf50;
-  color: white;
-  text-transform: uppercase;
-  padding: 12px;
-  position: sticky;
-  top: 0;
-  z-index: 1;
+.list_header h1 {
+  text-align: center;
+  color: #333;
 }
 
-.client-table tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-
-.client-table tr:hover {
-  background-color: #ddd;
-}
-
-.client-table td {
+.search_bar input {
+  width: 50%;
+  padding: 10px;
+  margin: 20px auto;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
   font-size: 16px;
-  padding: 12px;
 }
 
-button.approve,
-button.reject {
-  padding: 8px 12px;
-  border: none;
-  border-radius: 4px;
-  font-size: 14px;
+.list_container table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.list_container table th,
+.list_container table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.list_container table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+/* Icon styles */
+.icon {
+  font-size: 24px;
   cursor: pointer;
-  margin-right: 5px;
+  margin: 0 8px; /* Adds spacing between icons */
+  transition: 0.3s;
 }
 
-button.approve {
-  background-color: #4caf50;
-  color: #fff;
+.edit-icon {
+  color: #007bff;
 }
 
-button.reject {
-  background-color: #f44336;
-  color: #fff;
+.delete-icon {
+  color: #dc3545;
 }
 
-button.approve:hover {
-  background-color: #45a049;
+/* Hover effect for icons */
+.edit-icon:hover {
+  color: #0056b3; /* Darker blue for edit icon */
 }
 
-button.reject:hover {
-  background-color: #d32f2f;
+.delete-icon:hover {
+  color: #a02e2f; /* Darker red for delete icon */
 }
 
-button {
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-container {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+}
+
+.modal-form label {
+  display: block;
   margin-bottom: 10px;
-  padding: 10px 20px;
+}
+
+.modal-form .scrollable {
+  max-height: 500px; /* Adjust this height based on your preference */
+  overflow-y: auto;
+}
+
+.modal-actions {
+  margin-top: 20px;
+}
+
+.save-btn,
+.cancel-btn {
+  padding: 10px 15px;
   font-size: 14px;
-  background-color: #3f51b5;
-  color: #fff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
 }
 
+.save-btn {
+  background-color: #28a745;
+  color: white;
+  margin-right: 10px;
+}
 
+.cancel-btn {
+  background-color: #dc3545;
+  color: white;
+}

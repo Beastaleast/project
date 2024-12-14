@@ -7,7 +7,6 @@ function ClientManagement() {
 
   const [initialClients, setData] = useState([]);
 
-  // const res = await axios.get(API)
   useEffect(() => {
     getData();
   }, []);
@@ -20,8 +19,6 @@ function ClientManagement() {
   const [searchTerm, setSearchTerm] = useState("");
 
   const deleteClient = (id) => {
-    //setClients(clients.filter((client) => client.id !== id));
-    //console.log(id);
     const res = axios
       .delete(API + id, {
         headers: {

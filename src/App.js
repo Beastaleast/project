@@ -8,9 +8,10 @@ import E_Cards from "./ECommerce/E_Cards";
 import Login from "./LogIn/Login";
 import SinUP from "./SignUp/SinUP";
 import Flyer from "./DataAddiiton/Flyer";
-
+import UnderDevelopment from "./Appoinments/UnderDevelopment";
+import Diet from "./DietTeplate/Diet";
 function App() {
-  return (
+  return ( 
     <div className="App">
       <Router>
         <Routes>
@@ -22,6 +23,8 @@ function App() {
           <Route path="/Login" element={<Login />} />
           <Route path="/SignUp" element={<SinUP />} />
           <Route path="/slyer" element={<Flyer />} />
+          <Route path="/appointments" element={<UnderDevelopment />} />
+          <Route path="/dietteplate" element={<Diet />} />
         </Routes>
       </Router>
     </div>
