@@ -1,0 +1,163 @@
+/* Overlay for Modals */
+.Modal-overlays {
+  background-color: rgba(0, 0, 0, 0.5); /* Subtle transparent background for better focus on modal */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000; /* Ensure modal overlay is above all elements */
+}
+
+/* Modal container styling */
+.Modal-container {
+  background-color: white;
+  padding: 30px; /* More spacious padding */
+  border-radius: 12px; /* Slightly larger border radius for smooth corners */
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow for a modern look */
+  text-align: center;
+}
+
+/* Flex container for data addition buttons */
+.DataAdd {
+  display: flex;
+  justify-content: space-around; /* Center buttons with equal spacing */
+  margin-top: 80px; /* Slightly reduced margin for tighter structure */
+}
+
+/* Data addition buttons */
+.DataAddition-btn {
+  padding: 12px 20px; /* Larger button size for easier click */
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px; /* Rounded edges for better aesthetics */
+  margin-bottom: 15px;
+  transition: all 0.3s ease; /* Smooth hover effect */
+}
+
+/* Primary action button */
+.DataAddition-btn:first-of-type {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Success action button */
+.DataAddition-btn:last-of-type {
+  background-color: #28a745;
+  color: white;
+}
+
+/* Hover effect for all buttons */
+.DataAddition-btn:hover {
+  transform: scale(1.05); /* Slightly enlarges on hover */
+  opacity: 0.9; /* Reduces brightness for feedback */
+}
+
+/* Sidebar container alignment */
+.sidebar-align {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 15px; /* Increased margin for spacing */
+  width: 40%;
+}
+
+/* Flyer container layout */
+.flyer-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Uniform spacing between flyer items */
+  margin-top: 20px; /* Consistent margin across sections */
+}
+
+/* Individual flyer items */
+.flyer-item {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px; /* Enhanced corner rounding */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Clean shadow for floating effect */
+  border: 1px solid #ddd; /* Subtle border for separation */
+  transition: all 0.3s ease; /* Smooth hover animations */
+}
+
+/* Image inside flyer */
+.flyer-item img {
+  max-width: 300px;
+  height: auto;
+  margin-right: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Text content in flyer */
+.flyer-item div {
+  max-width: calc(100% - 320px); /* Ensures text fits alongside image */
+  font-size: 16px;
+  line-height: 1.6; /* Better readability */
+}
+
+/* Hover effect for flyer item */
+.flyer-item:hover {
+  transform: translateY(-5px); /* Lifts up slightly */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Right alignment section */
+.right-align {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-right: 50px;
+  width: 40%;
+}
+
+/* FAQ container layout */
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Uniform spacing between FAQ items */
+  margin-top: 20px; /* Consistent margin */
+}
+
+/* Individual FAQ items */
+.FAQ-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #ffffff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Question text styling */
+.FAQ-item strong {
+  color: #333;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px; /* Space between question and answer */
+}
+
+/* Answer text styling */
+.FAQ-item div {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.6; /* Improved readability */
+}
+
+/* FAQ hover effect */
+.FAQ-item:hover {
+  border-color: #007bff; /* Highlight on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
