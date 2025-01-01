@@ -2,12 +2,13 @@ import React, { useState, useEffect } from "react";
 import "./Cle.css";
 import axios from "axios";
 import DeleteIcon from "@mui/icons-material/Delete";
+import Loader from "../../Common/loader";
 
 function Cleints_Dashboard() {
   const API = "https://my-api-six-steel.vercel.app/api/userinfo/";
 
   const [initialClients, setData] = useState([]);
-
+   const [isLoading,setIsLoading] =useState(false);
   useEffect(() => {
     getData();
   }, []);
@@ -33,6 +34,7 @@ function Cleints_Dashboard() {
   };
 
   const getData = () => {
+    setIsLoading(true);
     const res = axios
       .get(API, {
         headers: {
@@ -41,6 +43,7 @@ function Cleints_Dashboard() {
       })
       .then(function (response) {
         setData(response.data);
+        setIsLoading(false);
       });
   };
 
@@ -72,7 +75,7 @@ function Cleints_Dashboard() {
       <div className="list_headers">
         <h1>Client List</h1>
       </div>
-
+       <Loader isLoading={isLoading}/>
       <div className="list_container">
         <table>
           <thead>
