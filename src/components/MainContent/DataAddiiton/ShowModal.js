@@ -19,10 +19,7 @@ function ShowModal({ closeFlyer, flyerdata }) {
             },
           }
         )
-        .then(
-          alert("flyer post successfully"), 
-          closeFlyer(), 
-          flyerdata());
+        .then(alert("flyer post successfully"), closeFlyer(), flyerdata());
     } catch (error) {
       console.error("Error fetching flyer data:", error);
     }

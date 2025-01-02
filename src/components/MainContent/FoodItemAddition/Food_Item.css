@@ -21,10 +21,8 @@
   gap: 10px; /* Spacing between elements */
 }
 
-/* Search Bar */
-.search_bar {
-  flex: 1; /* Allow the search bar to take up the remaining space */
-}
+
+
 
 .search_bar input {
   padding: 10px;
@@ -54,7 +52,8 @@
 
 /* Table Styles */
 .list_container {
-  overflow-x: auto; /* Handles small screens */
+  overflow-x: auto;
+  font-size: 10px; 
 }
 
 .list_container table {

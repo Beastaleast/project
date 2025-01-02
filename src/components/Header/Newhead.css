@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background: linear-gradient(to right, #0288d1, #03a9f4);
+  background-color: orangered;
   color: #fff;
   position: fixed;
   top: 0;
@@ -13,10 +13,10 @@
 }
 
 .logo {
-  height: 40px;
+  height: 55px;
 }
 
 .avatar {
-  height: 40px;
+  height: 60px;
   border-radius: 50%;
 }

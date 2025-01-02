@@ -3,6 +3,7 @@ import axios from "axios";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
 import "./Food_Item.css";
+import Loader from "../../Common/loader";
 
 const Food_Main = () => {
   const API = "https://my-api-six-steel.vercel.app/api/fooditems/";
@@ -11,16 +12,19 @@ const Food_Main = () => {
   const [editModalOpen, setEditModalOpen] = useState(false);
   const [addModalOpen, setAddModalOpen] = useState(false);
   const [currentClient, setCurrentClient] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
 
   // Fetch data from API
   const getData = async () => {
     try {
+      setIsLoading(true);
       const response = await axios.get(API, {
         headers: {
           "x-api-key": "ggp-pro-ject",
         },
       });
       setClients(response.data);
+      setIsLoading(false);
     } catch (error) {
       console.error("Error fetching data: ", error);
     }
@@ -130,6 +134,8 @@ const Food_Main = () => {
       <div className="list_header">
         <h1>Food Items</h1>
       </div>
+
+      <Loader isLoading={isLoading} />
 
       <div className="list_tools">
         <div className="add_item">

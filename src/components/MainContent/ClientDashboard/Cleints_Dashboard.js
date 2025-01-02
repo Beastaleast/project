@@ -8,7 +8,7 @@ function Cleints_Dashboard() {
   const API = "https://my-api-six-steel.vercel.app/api/userinfo/";
 
   const [initialClients, setData] = useState([]);
-   const [isLoading,setIsLoading] =useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
     getData();
   }, []);
@@ -75,7 +75,7 @@ function Cleints_Dashboard() {
       <div className="list_headers">
         <h1>Client List</h1>
       </div>
-       <Loader isLoading={isLoading}/>
+      <Loader isLoading={isLoading} />
       <div className="list_container">
         <table>
           <thead>

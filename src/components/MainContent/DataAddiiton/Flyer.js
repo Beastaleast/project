@@ -3,6 +3,8 @@ import "./Flyer.css";
 import ShowModal from "./ShowModal";
 import DisplayFAQ from "./DisplayFAQ";
 import axios from "axios";
+import DeleteIcon from "@mui/icons-material/Delete";
+import EditIcon from "@mui/icons-material/Edit";
 
 const Flyer = () => {
   const API = "https://my-api-six-steel.vercel.app/api/flyer";
@@ -70,6 +72,12 @@ const Flyer = () => {
                 <h3>{item.title}</h3>
                 <p>{item.description}</p>
               </div>
+              <button >
+              <EditIcon className="editicon"/>
+              </button>
+              <button>
+              <DeleteIcon className="deleteicon"/>
+              </button>
             </div>
           ))
         ) : (
