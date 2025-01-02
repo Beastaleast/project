@@ -5,6 +5,7 @@ import DisplayFAQ from "./DisplayFAQ";
 import axios from "axios";
 import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
+import Loader from "../../Common/loader";
 
 const Flyer = () => {
   const API = "https://my-api-six-steel.vercel.app/api/flyer";
@@ -14,7 +15,7 @@ const Flyer = () => {
   const [FAQ, setFAQ] = useState(false);
   const [flyerdata, setFlyerdata] = useState([]);
   const [FAQdata, setFAQdata] = useState([]);
-
+  const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
     flyerList();
     FAQList();
@@ -50,13 +51,34 @@ const Flyer = () => {
     console.log("hello");
   };
 
+  const deleteFlyer = (id) => {
+    setIsLoading(true);
+    axios
+      .delete(API + "/" + id, {
+        headers: {
+          "x-api-key": "ggp-pro-ject",
+        },
+      })
+      .then((response) => {
+        window.alert("Flyer deleted!!!");
+        setIsLoading(false);
+        flyerList();
+      })
+      .catch((error) => {
+        window.alert("Flyer can not be deleted due to some error", error);
+        setIsLoading(false);
+      });
+  };
+
   const closeFAQ = () => {
     setFAQ(false);
   };
 
   return (
     <div className="DataAdd">
-      <div className="sidebar-align">
+      <Loader isLoading={isLoading} />
+      <div>    
+        <div className="sidebar-align">
         <button className="DataAddition-btn" onClick={() => setFlyer(true)}>
           ADD Flyer
         </button>
@@ -69,14 +91,13 @@ const Flyer = () => {
             <div className="flyer-item" key={index}>
               <img src={item.imageUrl} alt={`Flyer ${index}`} />
               <div>
-                <h3>{item.title}</h3>
-                <p>{item.description}</p>
+                <p>{item.name}</p>
               </div>
-              <button >
-              <EditIcon className="editicon"/>
-              </button>
               <button>
-              <DeleteIcon className="deleteicon"/>
+                <EditIcon className="editicon" />
+              </button>
+              <button onClick={() => deleteFlyer(item._id)}>
+                <DeleteIcon className="deleteicon" color="error" />
               </button>
             </div>
           ))
@@ -84,8 +105,11 @@ const Flyer = () => {
           <div>Loading flyer data...</div>
         )}
       </div>
+      </div>
+  
 
       {/* FAQ Section */}
+      <div>
       <div className="right-align">
         <button className="DataAddition-btn" onClick={() => setFAQ(true)}>
           ADD FAQ
@@ -107,6 +131,7 @@ const Flyer = () => {
         ) : (
           <div>Loading FAQ data...</div>
         )}
+      </div>
       </div>
     </div>
   );

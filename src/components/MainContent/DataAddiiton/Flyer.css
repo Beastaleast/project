@@ -78,10 +78,7 @@
 
 /* Individual flyer items */
 .flyer-item {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  padding: 20px;
+  padding: 12px;
   background-color: #ffffff;
   border-radius: 12px; /* Enhanced corner rounding */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Clean shadow for floating effect */
@@ -93,7 +90,6 @@
 .flyer-item img {
   max-width: 300px;
   height: auto;
-  margin-right: 20px;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
