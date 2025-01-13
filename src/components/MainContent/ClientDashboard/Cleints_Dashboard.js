@@ -5,7 +5,7 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import Loader from "../../Common/loader";
 
 function Cleints_Dashboard() {
-  const API = "https://my-api-six-steel.vercel.app/api/userinfo/";
+  const API = "https://ggp-api.onrender.com/api/userinfo/";
 
   const [initialClients, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
