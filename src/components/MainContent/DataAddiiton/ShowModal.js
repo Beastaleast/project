@@ -3,7 +3,7 @@ import "./ShowModal.css";
 import axios from "axios";
 
 function ShowModal({ closeFlyer, flyerdata }) {
-  const API = "https://my-api-six-steel.vercel.app/api/flyer";
+  const API = "https://ggp-api.onrender.com/api/flyer";
   const [flyerName, setFlyerName] = useState(false);
   const [ImageUrl, setImageUrl] = useState(false);
 
