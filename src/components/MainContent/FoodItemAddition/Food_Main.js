@@ -6,7 +6,7 @@ import "./Food_Item.css";
 import Loader from "../../Common/loader";
 
 const Food_Main = () => {
-  const API = "https://my-api-six-steel.vercel.app/api/fooditems/";
+  const API = "https://ggp-api.onrender.com/api/fooditems/";
   const [clients, setClients] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [editModalOpen, setEditModalOpen] = useState(false);
