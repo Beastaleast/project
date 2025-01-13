@@ -3,7 +3,7 @@ import "./ShowModal.css";
 import axios from "axios";
 
 function DisplayFAQ({ closeFAQ, FAQList }) {
-  const APIF = "https://my-api-six-steel.vercel.app/api/faq";
+  const APIF = "https://ggp-api.onrender.com/api/faq";
   const [question, setQuestion] = useState("");
   const [answer, setAnswer] = useState("");
 
