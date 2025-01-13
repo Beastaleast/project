@@ -8,8 +8,8 @@ import EditIcon from "@mui/icons-material/Edit";
 import Loader from "../../Common/loader";
 
 const Flyer = () => {
-  const API = "https://my-api-six-steel.vercel.app/api/flyer";
-  const APIF = "https://my-api-six-steel.vercel.app/api/faq";
+  const API = "https://ggp-api.onrender.com/api/flyer";
+  const APIF = "https://ggp-api.onrender.com/api/faq";
 
   const [flyer, setFlyer] = useState(false);
   const [FAQ, setFAQ] = useState(false);
