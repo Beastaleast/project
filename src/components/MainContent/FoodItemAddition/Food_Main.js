@@ -14,7 +14,6 @@ const Food_Main = () => {
   const [currentClient, setCurrentClient] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
 
-  // Fetch data from API
   const getData = async () => {
     try {
       setIsLoading(true);
@@ -34,7 +33,7 @@ const Food_Main = () => {
     getData();
   }, []);
 
-  // Delete client and sync with API
+  
   const deleteClient = async (id) => {
     if (window.confirm("Are you sure you want to delete this item?")) {
       try {
@@ -50,13 +49,13 @@ const Food_Main = () => {
     }
   };
 
-  // Open edit modal
+ 
   const openEditModal = (client) => {
-    setCurrentClient({ ...client }); // Clone the client object for safe mutation
+    setCurrentClient({ ...client }); 
     setEditModalOpen(true);
   };
 
-  // Open add modal
+  
   const openAddModal = () => {
     setCurrentClient({
       name: "",
@@ -72,14 +71,14 @@ const Food_Main = () => {
     setAddModalOpen(true);
   };
 
-  // Close modal
+
   const closeModal = () => {
     setEditModalOpen(false);
     setAddModalOpen(false);
     setCurrentClient(null);
   };
 
-  // Save edited client details
+  
   const saveChanges = async () => {
     try {
       await axios.put(`${API}${currentClient.id}`, currentClient, {
@@ -98,7 +97,7 @@ const Food_Main = () => {
     }
   };
 
-  // Add new client
+ 
   const addClient = async () => {
     try {
       const response = await axios.post(API, currentClient, {
@@ -113,13 +112,13 @@ const Food_Main = () => {
     }
   };
 
-  // Handle input changes in modal
+  
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setCurrentClient((prev) => ({ ...prev, [name]: value }));
   };
 
-  // Filter clients
+ 
   const filteredClients = clients.filter((client) => {
     const term = searchTerm.toLowerCase();
     return (
@@ -203,14 +202,14 @@ const Food_Main = () => {
         </table>
       </div>
 
-      {/* Edit Modal */}
+     
       {editModalOpen && (
         <div className="modal-overlay">
           <div className="modal-container">
             <h2>Edit Client Details</h2>
             <div className="modal-form">
               <div className="scrollable">
-                {/* Form Fields */}
+              
                 {Object.keys(currentClient).map((key) =>
                   key !== "id" ? (
                     <label key={key}>
@@ -238,14 +237,14 @@ const Food_Main = () => {
         </div>
       )}
 
-      {/* Add Modal */}
+      
       {addModalOpen && (
         <div className="modal-overlay">
           <div className="modal-container">
             <h2>Add New Food Item</h2>
             <div className="modal-form">
               <div className="scrollable">
-                {/* Form Fields */}
+               
                 {Object.keys(currentClient).map((key) =>
                   key !== "id" ? (
                     <label key={key}>

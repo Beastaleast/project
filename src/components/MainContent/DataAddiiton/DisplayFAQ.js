@@ -3,7 +3,7 @@ import "./ShowModal.css";
 import axios from "axios";
 
 function DisplayFAQ({ closeFAQ, FAQList }) {
-  const APIF = "https://my-api-six-steel.vercel.app/api/faq";
+  const APIF = process.env.REACT_APP_GGP_API_URL;
   const [question, setQuestion] = useState("");
   const [answer, setAnswer] = useState("");
 
@@ -11,18 +11,15 @@ function DisplayFAQ({ closeFAQ, FAQList }) {
     try {
       const response = await axios
         .post(
-          APIF,
-          { ques: question, ans: answer },
+          APIF+"/faq",
+          { question: question, answer: answer },
           {
             headers: {
               "x-api-key": "ggp-pro-ject",
             },
           }
         )
-        .then(
-          alert("fAQ post successfully"), 
-          closeFAQ(), 
-          FAQList());
+        .then(alert("fAQ post successfully"), closeFAQ(), FAQList());
     } catch (error) {
       console.error("Error fetching flyer data:", error);
     }

@@ -70,12 +70,10 @@ button.reject:hover {
   background-color: #d32f2f;
 }
 
-/* Hover effect for buttons */
 button:hover {
   opacity: 0.9;
 }
 
-/* Media Queries */
 @media (max-width: 768px) {
   .client-table {
     width: 100%;

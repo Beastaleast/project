@@ -1,9 +1,13 @@
-import react from 'react';
+import React from "react";
 
-export default function Loader({isLoading})
-{
-    return(<>
-        {isLoading && <div className="loaderonpage"><span class="loader"></span></div>}
-        </>
-    )
+export default function Loader({ isLoading }) {
+  return (
+    <>
+      {isLoading && (
+        <div className="loaderonpage">
+          <span class="loader"></span>
+        </div>
+      )}
+    </>
+  );
 }

@@ -11,8 +11,7 @@ export default function Sidebar() {
     { label: "Diet Template Addition", path: "/diet" },
     { label: "ECommerce", path: "/ecommerce" },
     { label: "Flyer", path: "/slyer" },
-    { label: "Login", path: "/login" },
-    { label: "SignUp", path: "/signup" },
+   
   ];
 
   return (

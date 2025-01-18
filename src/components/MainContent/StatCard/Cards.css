@@ -1,50 +1,160 @@
+/* Cards.css */
+
 .Home_Cards {
+  font-family: Arial, sans-serif;
   display: flex;
-  justify-content: space-evenly;
-  padding: 10px;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.home_header {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between; /* Distributes space between elements */
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #ddd;
+}
+
+.header-title {
+  margin: 0 auto; /* Centers the title */
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center; /* Ensures proper alignment in smaller screens */
+}
+
+.header-right {
+  margin-left: auto; /* Pushes the buttons to the far right */
+  display: flex;
+  gap: 1rem; /* Space between the buttons */
+}
+
+.navButton {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.navButton:hover {
+  background-color: #0056b3;
 }
 
 .Card_Group {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  width: 70%;
-  justify-content: flex-start;
-  position: fixed;
-  right: 0;
-  top: 130px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  padding: 2rem;
 }
 
 .Peoplecard {
-  background-color: #007bff;
-  border: 2px ;
-  border-radius: 10px;
-  padding: 20px;
+  background: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-  width: 150px;
-  height: 100px;
-  
-}
-
-.Peoplecard p {
-  margin: 0;
-  font-size: 18px;
-  font-weight: bold;
-  color: white;
+  padding: 1rem;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .Peoplecard:hover {
-  transform: scale(1.05);
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-@media (max-width: 768px) {
-  .Card_Group {
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-  }
+.count {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
 }
 
-.Peoplecard {
-  padding: 15px;
+.label {
+  font-size: 1rem;
+  color: #666;
+}
+
+.footer {
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto;
+  background-color: #f7f7f7;
+  border-top: 1px solid #ddd;
+  background-color:  #ff9134;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Transparent background for a dim effect */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensures the modal appears above all content */
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%; /* Adjusts width to prevent covering the entire screen */
+  max-width: 400px; /* Limits the size on larger screens */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow for better focus */
+  position: relative; /* Positioning for close button alignment */
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.close:hover {
+  color: #ff0000;
+}
+
+
+.modal-btn {
+  width: 100%;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.modal-btn:hover {
+  background-color: #0056b3;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
 }

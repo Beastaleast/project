@@ -5,15 +5,12 @@
   position: fixed;
   right: 0px;
   top: 200px;
-  max-width:1240px;
+  max-width: 1240px;
   max-height: 600px;
   overflow-y: auto;
   border: 1px solid #ccc;
   margin-top: 20px;
-  left:300px;
-  
-  
-
+  left: 300px;
 }
 
 .list_headers {
@@ -63,8 +60,6 @@ button:first-of-type {
   color: white;
 }
 
-
-
 button:hover {
   opacity: 0.9;
 }
@@ -109,7 +104,6 @@ button:hover {
   position: fixed;
   right: 0px;
   top: 145px;
-  
 }
 
 .delete-icon {

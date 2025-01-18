@@ -14,7 +14,7 @@ import Cards from "./MainContent/StatCard/Cards";
 
 function App() {
   return (
-    <div className="app-container">
+    <div className="app-container"> 
       <Router>
         <Header />
         <Button />

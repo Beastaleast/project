@@ -1,17 +1,15 @@
-
 .under-construction-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f4f4f9;
-    color: #333; 
-    text-align: center;
-  }
-  
-  .under-construction-text {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #d9534f; 
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f9;
+  color: #333;
+  text-align: center;
+}
+
+.under-construction-text {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #d9534f;
+}

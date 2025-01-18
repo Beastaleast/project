@@ -1,11 +1,9 @@
-/* General Styles */
 .client-management {
   font-family: Arial, sans-serif;
   margin: 20px;
   color: #333;
 }
 
-/* Header */
 .list_header h1 {
   text-align: center;
   font-size: 2em;
@@ -13,16 +11,12 @@
   margin-bottom: 20px;
 }
 
-/* Container for search bar and add button */
 .list_tools {
   display: flex;
-  align-items: center; /* Align items vertically */
+  align-items: center;
   margin: 20px 0;
-  gap: 10px; /* Spacing between elements */
+  gap: 10px;
 }
-
-
-
 
 .search_bar input {
   padding: 10px;
@@ -32,7 +26,6 @@
   font-size: 16px;
 }
 
-/* Add Food Item Button */
 .add_item button {
   padding: 10px 15px;
   font-size: 16px;
@@ -48,12 +41,9 @@
   background-color: #0056b3;
 }
 
-
-
-/* Table Styles */
 .list_container {
   overflow-x: auto;
-  font-size: 10px; 
+  font-size: 10px;
 }
 
 .list_container table {

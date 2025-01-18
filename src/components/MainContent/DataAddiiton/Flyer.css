@@ -1,6 +1,5 @@
-/* Overlay for Modals */
 .Modal-overlays {
-  background-color: rgba(0, 0, 0, 0.5); /* Subtle transparent background for better focus on modal */
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,84 +8,74 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  z-index: 1000; /* Ensure modal overlay is above all elements */
+  z-index: 1000;
 }
 
-/* Modal container styling */
 .Modal-container {
   background-color: white;
-  padding: 30px; /* More spacious padding */
-  border-radius: 12px; /* Slightly larger border radius for smooth corners */
+  padding: 30px;
+  border-radius: 12px;
   width: 90%;
   max-width: 500px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow for a modern look */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   text-align: center;
 }
 
-/* Flex container for data addition buttons */
 .DataAdd {
   display: flex;
-  justify-content: space-around; /* Center buttons with equal spacing */
-  margin-top: 80px; /* Slightly reduced margin for tighter structure */
+  justify-content: space-around;
+  margin-top: 80px;
 }
 
-/* Data addition buttons */
 .DataAddition-btn {
-  padding: 12px 20px; /* Larger button size for easier click */
+  padding: 12px 20px;
   font-size: 16px;
   border: none;
   cursor: pointer;
-  border-radius: 8px; /* Rounded edges for better aesthetics */
+  border-radius: 8px;
   margin-bottom: 15px;
-  transition: all 0.3s ease; /* Smooth hover effect */
+  transition: all 0.3s ease;
 }
 
-/* Primary action button */
 .DataAddition-btn:first-of-type {
   background-color: #007bff;
   color: white;
 }
 
-/* Success action button */
 .DataAddition-btn:last-of-type {
   background-color: #28a745;
   color: white;
 }
 
-/* Hover effect for all buttons */
 .DataAddition-btn:hover {
-  transform: scale(1.05); /* Slightly enlarges on hover */
-  opacity: 0.9; /* Reduces brightness for feedback */
+  transform: scale(1.05);
+  opacity: 0.9;
 }
 
-/* Sidebar container alignment */
 .sidebar-align {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-left: 15px; /* Increased margin for spacing */
+  margin-left: 15px;
   width: 40%;
 }
 
-/* Flyer container layout */
 .flyer-container {
   display: flex;
   flex-direction: column;
-  gap: 20px; /* Uniform spacing between flyer items */
-  margin-top: 20px; /* Consistent margin across sections */
+  gap: 20px;
+  margin-top: 20px;
 }
 
-/* Individual flyer items */
 .flyer-item {
   padding: 12px;
   background-color: #ffffff;
-  border-radius: 12px; /* Enhanced corner rounding */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Clean shadow for floating effect */
-  border: 1px solid #ddd; /* Subtle border for separation */
-  transition: all 0.3s ease; /* Smooth hover animations */
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  border: 1px solid #ddd;
+  transition: all 0.3s ease;
 }
 
-/* Image inside flyer */
 .flyer-item img {
   max-width: 300px;
   height: auto;
@@ -94,20 +83,17 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-/* Text content in flyer */
 .flyer-item div {
-  max-width: calc(100% - 320px); /* Ensures text fits alongside image */
+  max-width: calc(100% - 320px);
   font-size: 16px;
-  line-height: 1.6; /* Better readability */
+  line-height: 1.6;
 }
 
-/* Hover effect for flyer item */
 .flyer-item:hover {
-  transform: translateY(-5px); /* Lifts up slightly */
+  transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Right alignment section */
 .right-align {
   display: flex;
   flex-direction: column;
@@ -116,15 +102,13 @@
   width: 40%;
 }
 
-/* FAQ container layout */
 .faq-container {
   display: flex;
   flex-direction: column;
-  gap: 15px; /* Uniform spacing between FAQ items */
-  margin-top: 20px; /* Consistent margin */
+  gap: 15px;
+  margin-top: 20px;
 }
 
-/* Individual FAQ items */
 .FAQ-item {
   display: flex;
   flex-direction: column;
@@ -137,23 +121,20 @@
   transition: all 0.3s ease;
 }
 
-/* Question text styling */
 .FAQ-item strong {
   color: #333;
   font-size: 18px;
   font-weight: bold;
-  margin-bottom: 10px; /* Space between question and answer */
+  margin-bottom: 10px;
 }
 
-/* Answer text styling */
 .FAQ-item div {
   color: #555;
   font-size: 16px;
-  line-height: 1.6; /* Improved readability */
+  line-height: 1.6;
 }
 
-/* FAQ hover effect */
 .FAQ-item:hover {
-  border-color: #007bff; /* Highlight on hover */
+  border-color: #007bff;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }

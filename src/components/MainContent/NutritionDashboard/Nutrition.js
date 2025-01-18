@@ -1,7 +1,7 @@
 import React from "react";
 import "./Nut.css";
 
-const Nutrition=()=> {
+const Nutrition = () => {
   const Ndata = {
     Name: "Udit Kushwaha",
     Number_of_Client: "4",
@@ -9,12 +9,10 @@ const Nutrition=()=> {
     Experience: "3",
   };
 
-  // Handler for the Approve button
   const handleApprove = () => {
     alert(`Client ${Ndata.Name} Approved!`);
   };
 
-  // Handler for the Reject button
   const handleReject = () => {
     alert(`Client ${Ndata.Name} Approved!`);
   };
@@ -50,5 +48,5 @@ const Nutrition=()=> {
       </table>
     </div>
   );
-}
+};
 export default Nutrition;

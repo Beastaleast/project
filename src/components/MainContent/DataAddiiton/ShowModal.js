@@ -3,7 +3,7 @@ import "./ShowModal.css";
 import axios from "axios";
 
 function ShowModal({ closeFlyer, flyerdata }) {
-  const API = "https://my-api-six-steel.vercel.app/api/flyer";
+  const API = "process.env.REACT_APP_GGP_API_URL";
   const [flyerName, setFlyerName] = useState(false);
   const [ImageUrl, setImageUrl] = useState(false);
 
@@ -11,7 +11,7 @@ function ShowModal({ closeFlyer, flyerdata }) {
     try {
       const response = await axios
         .post(
-          API,
+          API +"/flyer",
           { name: flyerName, imageUrl: ImageUrl, link: ImageUrl },
           {
             headers: {
@@ -28,7 +28,7 @@ function ShowModal({ closeFlyer, flyerdata }) {
     <div className="modal-overlay">
       <div className="modal-container">
         <div className="modal-header">
-          <h1>Welcome to the Good Gut Project</h1>
+          <h1>Add The Name and Url</h1>
           <button className="close-btn" onClick={closeFlyer}>
             &times;
           </button>

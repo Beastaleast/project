@@ -5,16 +5,16 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import Loader from "../../Common/loader";
 
 function Cleints_Dashboard() {
-  const API = "https://my-api-six-steel.vercel.app/api/userinfo/";
+  const API = process.env.REACT_APP_GGP_API_URL;
 
   const [initialClients, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
-    getData();
+    getData(); 
   }, []);
 
   useEffect(() => {
-    console.log(initialClients);
+    console.log(process.env);
   }, [initialClients]);
 
   const [clients, setClients] = useState(initialClients);
@@ -22,7 +22,7 @@ function Cleints_Dashboard() {
 
   const deleteClient = (id) => {
     const res = axios
-      .delete(API + id, {
+      .delete(API +"/users/"+ id, {
         headers: {
           "x-api-key": "ggp-pro-ject",
         },
@@ -36,13 +36,14 @@ function Cleints_Dashboard() {
   const getData = () => {
     setIsLoading(true);
     const res = axios
-      .get(API, {
+      .get(API+"/users", {
         headers: {
           "x-api-key": "ggp-pro-ject",
         },
       })
       .then(function (response) {
-        setData(response.data);
+        console.log(response)
+        setData(response.data.Users);
         setIsLoading(false);
       });
   };

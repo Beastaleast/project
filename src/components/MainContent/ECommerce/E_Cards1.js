@@ -6,7 +6,6 @@ function E_Cards1() {
   const APIPRODECT = "https://my-api-six-steel.vercel.app/api/products";
   const [products, setProducts] = useState([]);
 
- 
   useEffect(() => {
     axios
       .get(APIPRODECT, {
@@ -15,7 +14,7 @@ function E_Cards1() {
         },
       })
       .then((response) => {
-        setProducts(response.data); 
+        setProducts(response.data);
       })
       .catch((error) => {
         console.error("Error fetching products:", error);
@@ -36,7 +35,7 @@ function E_Cards1() {
           </div>
         ))
       ) : (
-        <p>Loading products...</p> 
+        <p>Loading products...</p>
       )}
     </div>
   );
