@@ -1,3 +1,4 @@
+import {useEffect} from 'react'
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "../App.css";
 import Button from "./Sidebar/Button";
@@ -12,7 +13,9 @@ import Signup from "./MainContent/Reports/SignUp/SinUp1";
 import Nutrition from "./MainContent/NutritionDashboard/Nutrition";
 import Cards from "./MainContent/StatCard/Cards";
 
+
 function App() {
+
   return (
     <div className="app-container"> 
       <Router>
@@ -20,7 +23,7 @@ function App() {
         <Button />
         <div className="content">
           <Routes>
-            <Route path="/slyer" element={<Flyer />} />
+            <Route path="/flyer" element={<Flyer />} />
             <Route path="/client" element={<Cleints_Dashboard />} />
             <Route path="/diet" element={<Diet />} />
             <Route path="/ecommerce" element={<E_Cards1 />} />

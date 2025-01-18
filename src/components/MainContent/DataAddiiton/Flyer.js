@@ -6,6 +6,7 @@ import axios from "axios";
 import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
 import Loader from "../../Common/loader";
+import Auth from "../../Common/auth";
 
 const Flyer = () => {
   const API = process.env.REACT_APP_GGP_API_URL;
@@ -99,6 +100,7 @@ const Flyer = () => {
 
   return (
     <div className="DataAdd">
+      <Auth/>
       <Loader isLoading={isLoading} />
       <div>
         <div className="sidebar-align">

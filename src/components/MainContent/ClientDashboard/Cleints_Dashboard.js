@@ -3,19 +3,15 @@ import "./Cle.css";
 import axios from "axios";
 import DeleteIcon from "@mui/icons-material/Delete";
 import Loader from "../../Common/loader";
+import Auth from "../../Common/auth";
 
 function Cleints_Dashboard() {
   const API = process.env.REACT_APP_GGP_API_URL;
-
   const [initialClients, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
     getData(); 
   }, []);
-
-  useEffect(() => {
-    console.log(process.env);
-  }, [initialClients]);
 
   const [clients, setClients] = useState(initialClients);
   const [searchTerm, setSearchTerm] = useState("");
@@ -73,6 +69,7 @@ function Cleints_Dashboard() {
 
   return (
     <div>
+      <Auth/>
       <div className="list_headers">
         <h1>Client List</h1>
       </div>

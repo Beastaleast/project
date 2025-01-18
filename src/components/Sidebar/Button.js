@@ -10,7 +10,7 @@ export default function Sidebar() {
     { label: "Food Item Addition", path: "/food_item" },
     { label: "Diet Template Addition", path: "/diet" },
     { label: "ECommerce", path: "/ecommerce" },
-    { label: "Flyer", path: "/slyer" },
+    { label: "Flyer", path: "/flyer" },
    
   ];
 

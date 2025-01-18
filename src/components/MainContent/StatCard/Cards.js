@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Cards.css";
+import Auth from "../../Common/auth";
 
 function Cards() {
   const [showLoginModal, setShowLoginModal] = useState(false);
@@ -12,6 +13,7 @@ function Cards() {
 
   return (
     <div className="Home_Cards">
+      <Auth/>
       <header className="home_header">
         <div className="header-right">
           <button className="navButton" onClick={() => setShowLoginModal(true)}>

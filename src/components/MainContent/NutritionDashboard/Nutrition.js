@@ -1,5 +1,6 @@
 import React from "react";
 import "./Nut.css";
+import Auth from "../../Common/auth";
 
 const Nutrition = () => {
   const Ndata = {
@@ -19,6 +20,7 @@ const Nutrition = () => {
 
   return (
     <div className="table-container">
+      <Auth/>
       <table className="client-table">
         <thead>
           <tr>

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./E_Cards1.css";
+import Auth from "../../Common/auth";
 
 function E_Cards1() {
   const APIPRODECT = "https://ggp-api.onrender.com/api/products";
@@ -23,6 +24,7 @@ function E_Cards1() {
 
   return (
     <div className="container">
+      <Auth/>
       {products.length > 0 ? (
         products.map((product, index) => (
           <div className="card" key={index}>

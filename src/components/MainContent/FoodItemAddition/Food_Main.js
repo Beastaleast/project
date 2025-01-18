@@ -4,6 +4,7 @@ import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
 import "./Food_Item.css";
 import Loader from "../../Common/loader";
+import Auth from "../../Common/auth";
 
 const Food_Main = () => {
   const API = "https://ggp-api.onrender.com/api/fooditems/";
@@ -130,6 +131,7 @@ const Food_Main = () => {
 
   return (
     <div className="client-management">
+      <Auth/>
       <div className="list_header">
         <h1>Food Items</h1>
       </div>
