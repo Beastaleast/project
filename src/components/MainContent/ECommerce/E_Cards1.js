@@ -3,7 +3,7 @@ import axios from "axios";
 import "./E_Cards1.css";
 
 function E_Cards1() {
-  const APIPRODECT = "https://my-api-six-steel.vercel.app/api/products";
+  const APIPRODECT = "https://ggp-api.onrender.com/api/products";
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
