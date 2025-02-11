@@ -1,34 +1,35 @@
-import React,{useEffect,useState} from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "./Login1.css";
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from "react-redux";
 import { Authentication } from "../../../actions/authActions";
-import { useNavigate } from "react-router-dom";
 
 function Login() {
   const navigate = useNavigate();
-  const [credentials , setCredentials] = useState({email: "", password:""});
-  const [message,setMessage] = useState('')
   const dispatch = useDispatch();
   const isAuthenticated = useSelector((state) => state.authenticator.value);
+  const [credentials, setCredentials] = useState({ email: "", password: "" });
+  const [message, setMessage] = useState("");
 
-  useEffect(()=>{
-console.log(isAuthenticated);
-  },[isAuthenticated])
-
-  const checkAuthentication =()=>
-  {
-    if(credentials.email === "kanpur@ggp.com" && credentials.password === "kanpurggp")
-    {
-      dispatch(Authentication(true));
-      setMessage("");
-      navigate("/home")
+  useEffect(() => {
+    if (isAuthenticated) {
+      navigate("/home"); // Redirect if already logged in
     }
-    else{
+  }, [isAuthenticated, navigate]);
+
+  const checkAuthentication = () => {
+    if (credentials.email === "kanpur@ggp.com" && credentials.password === "kanpurggp") {
+      dispatch(Authentication(true));
+      localStorage.setItem("isAuthenticated", "true"); // Store authentication status
+      setMessage("");
+      navigate("/home");
+    } else {
       dispatch(Authentication(false));
+      localStorage.setItem("isAuthenticated", "false"); 
       setMessage("Login Failed!!!");
     }
-  }
+  };
+
   return (
     <div className="login-container">
       <div className="login-header">
@@ -43,7 +44,8 @@ console.log(isAuthenticated);
             id="email"
             name="email"
             placeholder="Enter your email"
-            onChange={(e)=>{setCredentials({...credentials,email:e.target.value})}}
+            value={credentials.email}
+            onChange={(e) => setCredentials({ ...credentials, email: e.target.value })}
           />
         </div>
         <div className="form-group">
@@ -53,11 +55,12 @@ console.log(isAuthenticated);
             id="password"
             name="password"
             placeholder="Enter your password"
-            onChange={(e)=>{setCredentials({...credentials,password:e.target.value})}}
+            value={credentials.password}
+            onChange={(e) => setCredentials({ ...credentials, password: e.target.value })}
           />
         </div>
-        <button className="login-btn" onClick={()=>checkAuthentication()}>Log In</button>
-       {message && <h3>{message}</h3>}
+        <button className="login-btn" onClick={checkAuthentication}>Log In</button>
+        {message && <h3 className="error-message">{message}</h3>}
         <p className="signup-text">
           Don't have an account?{" "}
           <Link to="/signup" className="signup-link">
