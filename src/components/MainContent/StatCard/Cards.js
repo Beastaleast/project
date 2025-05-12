@@ -16,15 +16,7 @@ function Cards() {
       <Auth/>
       <header className="home_header">
         <div className="header-right">
-          <button className="navButton" onClick={() => setShowLoginModal(true)}>
-            Login
-          </button>
-          <button
-            className="navButton"
-            onClick={() => setShowSignupModal(true)}
-          >
-            Signup
-          </button>
+         
         </div>
         <h1 className="header-title">Welcome to Our Platform</h1>
       </header>

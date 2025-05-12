@@ -73,3 +73,20 @@
       transform: rotate(360deg);
   }
   } 
+
+  .app-container {
+    padding-top: 64px;
+  }
+  
+  .main-content {
+    padding: 20px;
+    margin-left: 250px; 
+    transition: margin-left 0.3s ease-in-out;
+  }
+  
+  @media (max-width: 768px) {
+    .main-content {
+      margin-left: 0;
+    }
+  }
+  

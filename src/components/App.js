@@ -1,7 +1,13 @@
 import { useEffect } from "react";
-import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Navigate,
+} from "react-router-dom";
 import { useSelector } from "react-redux";
 import "../App.css";
+
 import Button from "./Sidebar/Button";
 import Header from "./Header/Newhead";
 import Flyer from "./MainContent/DataAddiiton/Flyer";
@@ -26,7 +32,8 @@ function App() {
       <div className="app-container">
         {isAuthenticated && <Header />}
         {isAuthenticated && <Button />}
-        <div className="content">
+
+        <main className="main-content">
           <Routes>
             {!isAuthenticated ? (
               <>
@@ -47,7 +54,7 @@ function App() {
               </>
             )}
           </Routes>
-        </div>
+        </main>
       </div>
     </Router>
   );

@@ -26,7 +26,7 @@ const Flyer = () => {
 
   const flyerList = async () => {
     try {
-      const response = await axios.get(API+"/flyer", {
+      const response = await axios.get(API + "/flyer", {
         headers: {
           "x-api-key": "ggp-pro-ject",
         },
@@ -39,7 +39,7 @@ const Flyer = () => {
 
   const FAQList = async () => {
     try {
-      const response = await axios.get(API +"/faq", {
+      const response = await axios.get(API + "/faq", {
         headers: {
           "x-api-key": "ggp-pro-ject",
         },
@@ -89,19 +89,20 @@ const Flyer = () => {
   };
 
   const handleEditFlyer = (flyer) => {
-    setEditFlyerData(flyer); // Store flyer data for editing
-    setFlyer(true); // Open the modal for editing
+    setEditFlyerData(flyer); 
+    setFlyer(true); 
   };
 
   const handleEditFAQ = (faq) => {
-    setEditFAQData(faq); // Store FAQ data for editing
-    setFAQ(true); // Open the modal for editing
+    setEditFAQData(faq); 
+    setFAQ(true); 
   };
 
   return (
     <div className="DataAdd">
-      <Auth/>
+      <Auth />
       <Loader isLoading={isLoading} />
+      {/* Flyer Section */}
       <div>
         <div className="sidebar-align">
           <button className="DataAddition-btn" onClick={() => setFlyer(true)}>
@@ -111,12 +112,12 @@ const Flyer = () => {
             <ShowModal
               closeFlyer={() => setFlyer(false)}
               flyerdata={flyerdata}
-              editData={editFlyerData} // Pass data for editing
+              editData={editFlyerData}
             />
           )}
         </div>
 
-        <div className="flyer-container">
+        <div className="scrollable-box flyer-container">
           {flyerdata.length > 0 ? (
             flyerdata.map((item, index) => (
               <div className="flyer-item" key={index}>
@@ -148,11 +149,12 @@ const Flyer = () => {
             <DisplayFAQ
               closeFAQ={() => setFAQ(false)}
               FAQList={FAQList}
-              editData={editFAQData} // Pass data for editing
+              editData={editFAQData}
             />
           )}
         </div>
-        <div className="faq-container">
+
+        <div className="scrollable-box faq-container">
           {FAQdata.length > 0 ? (
             FAQdata.map((item, index) => (
               <div className="FAQ-item" key={index}>
@@ -180,4 +182,3 @@ const Flyer = () => {
 };
 
 export default Flyer;
- 

@@ -3,12 +3,10 @@ import "./Newhead.css";
 
 export default function Header() {
   return (
-    <div className="header">
-      <img src="gglogo-svg.svg" alt="Logo" className="logo" />
-      <h1>Welcome to the GOOD GUT PROJECT</h1>
-      <div>
-        <img src="2815428.png" alt="User Avatar" className="avatar" />
-      </div>
-    </div>
+    <header className="gg-header">
+      <img src="gglogo-svg.svg" alt="Logo" className="gg-logo" />
+      <h1 className="gg-title">GOOD GUT PROJECT</h1>
+      <img src="2815428.png" alt="User Avatar" className="gg-avatar" />
+    </header>
   );
 }

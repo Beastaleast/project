@@ -18,14 +18,17 @@ function Login() {
   }, [isAuthenticated, navigate]);
 
   const checkAuthentication = () => {
-    if (credentials.email === "kanpur@ggp.com" && credentials.password === "kanpurggp") {
+    if (
+      credentials.email === "kanpur@ggp.com" &&
+      credentials.password === "kanpurggp"
+    ) {
       dispatch(Authentication(true));
       localStorage.setItem("isAuthenticated", "true"); // Store authentication status
       setMessage("");
       navigate("/home");
     } else {
       dispatch(Authentication(false));
-      localStorage.setItem("isAuthenticated", "false"); 
+      localStorage.setItem("isAuthenticated", "false");
       setMessage("Login Failed!!!");
     }
   };
@@ -45,7 +48,9 @@ function Login() {
             name="email"
             placeholder="Enter your email"
             value={credentials.email}
-            onChange={(e) => setCredentials({ ...credentials, email: e.target.value })}
+            onChange={(e) =>
+              setCredentials({ ...credentials, email: e.target.value })
+            }
           />
         </div>
         <div className="form-group">
@@ -56,10 +61,14 @@ function Login() {
             name="password"
             placeholder="Enter your password"
             value={credentials.password}
-            onChange={(e) => setCredentials({ ...credentials, password: e.target.value })}
+            onChange={(e) =>
+              setCredentials({ ...credentials, password: e.target.value })
+            }
           />
         </div>
-        <button className="login-btn" onClick={checkAuthentication}>Log In</button>
+        <button className="login-btn" onClick={checkAuthentication}>
+          Log In
+        </button>
         {message && <h3 className="error-message">{message}</h3>}
         <p className="signup-text">
           Don't have an account?{" "}
