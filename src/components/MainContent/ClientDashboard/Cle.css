@@ -11,15 +11,39 @@
   border: 1px solid #ccc;
   margin-top: 20px;
   left: 300px;
+  background-color: white;
 }
 
-.list_headers {
+/* Combined header and search bar */
+.header_container {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   position: fixed;
-  left: 290px;
   top: 100px;
-  color: #f44336;
+  left: 300px;
+  right: 0;
+  padding: 10px 20px;
+  background-color: white;
+  z-index: 10;
+  flex-wrap: wrap;
 }
+
+.page_title {
+  color: #f44336;
+  font-size: 24px;
+  margin: 0;
+}
+
+.search_input {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  min-width: 250px;
+  max-width: 100%;
+}
+
 /* Table styles */
 table {
   width: 100%;
@@ -56,7 +80,7 @@ button {
 }
 
 button:first-of-type {
-  background-color: #4caf50; /* Green color for Assign Nutritionist */
+  background-color: #4caf50; /* Green for Assign Nutritionist */
   color: white;
 }
 
@@ -64,8 +88,49 @@ button:hover {
   opacity: 0.9;
 }
 
+.delete-icon {
+  color: #dc3545;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.actions button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
+  .header_container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px;
+    left: 0;
+  }
+
+  .page_title {
+    font-size: 20px;
+  }
+
+  .search_input {
+    width: 100%;
+  }
+
+  .list_container {
+    position: static;
+    max-width: 100%;
+    max-height: none;
+    overflow: auto;
+    margin: 0;
+    padding: 10px;
+  }
+
   table,
   thead,
   tbody,
@@ -98,26 +163,4 @@ button:hover {
     font-weight: bold;
     text-align: left;
   }
-}
-
-.search_bar {
-  position: fixed;
-  right: 0px;
-  top: 145px;
-}
-
-.delete-icon {
-  color: #dc3545;
-}
-
-.actions {
-  display: flex;
-  gap: 10px; /* Adds space between buttons */
-  align-items: center;
-}
-
-.actions button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }

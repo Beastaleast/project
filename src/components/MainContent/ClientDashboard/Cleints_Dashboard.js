@@ -9,21 +9,21 @@ function Cleints_Dashboard() {
   const API = process.env.REACT_APP_GGP_API_URL;
   const [initialClients, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  useEffect(() => {
-    getData(); 
-  }, []);
-
   const [clients, setClients] = useState(initialClients);
   const [searchTerm, setSearchTerm] = useState("");
 
+  useEffect(() => {
+    getData();
+  }, []);
+
   const deleteClient = (id) => {
-    const res = axios
-      .delete(API +"/users/"+ id, {
+    axios
+      .delete(API + "/users/" + id, {
         headers: {
           "x-api-key": "ggp-pro-ject",
         },
       })
-      .then(function (response) {
+      .then(function () {
         getData();
         alert("Deleted successfully");
       });
@@ -31,15 +31,15 @@ function Cleints_Dashboard() {
 
   const getData = () => {
     setIsLoading(true);
-    const res = axios
-      .get(API+"/users", {
+    axios
+      .get(API + "/users", {
         headers: {
           "x-api-key": "ggp-pro-ject",
         },
       })
       .then(function (response) {
-        console.log(response)
         setData(response.data.Users);
+        setClients(response.data.Users); // keep state in sync
         setIsLoading(false);
       });
   };
@@ -69,11 +69,22 @@ function Cleints_Dashboard() {
 
   return (
     <div>
-      <Auth/>
-      <div className="list_headers">
-        <h1>Client List</h1>
+      <Auth />
+
+      {/* Updated Header and Search Bar */}
+      <div className="header_container">
+        <h1 className="page_title">Client List</h1>
+        <input
+          type="text"
+          className="search_input"
+          placeholder="Search clients by name, phone, email..."
+          value={searchTerm}
+          onChange={handleSearch}
+        />
       </div>
+
       <Loader isLoading={isLoading} />
+
       <div className="list_container">
         <table>
           <thead>
@@ -92,7 +103,7 @@ function Cleints_Dashboard() {
             </tr>
           </thead>
           <tbody>
-            {initialClients.map((client) => (
+            {filteredClients.map((client) => (
               <tr key={client.id}>
                 <td>{client.name}</td>
                 <td>{client.phone}</td>
@@ -118,15 +129,6 @@ function Cleints_Dashboard() {
             ))}
           </tbody>
         </table>
-      </div>
-
-      <div className="search_bar">
-        <input
-          type="text"
-          placeholder="Search clients by name, phone, email..."
-          value={searchTerm}
-          onChange={handleSearch}
-        />
       </div>
     </div>
   );

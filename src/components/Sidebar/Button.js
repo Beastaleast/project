@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Sidebar.css";
 
-export default function Sidebar() {
-  const [isOpen, setIsOpen] = useState(false);
-
+export default function Sidebar(props) {
+  //const [isOpen, setIsOpen] = useState(false);
+const {isOpen,setIsOpen} = props;
   const menuItems = [
     { label: "Home", path: "/home" },
     { label: "Nutrition Dashboard", path: "/nutrition" },
@@ -17,11 +17,6 @@ export default function Sidebar() {
 
   return (
     <>
-     
-      <button className="gg-hamburger" onClick={() => setIsOpen(!isOpen)}>
-        ☰
-      </button>
-
       {/* Sidebar */}
       <aside className={`gg-sidebar ${isOpen ? "open" : ""}`}>
         <ul className="gg-menu">
@@ -34,9 +29,6 @@ export default function Sidebar() {
           ))}
         </ul>
       </aside>
-
-      
-      {isOpen && <div className="sidebar-backdrop" onClick={() => setIsOpen(false)} />}
     </>
   );
 }
