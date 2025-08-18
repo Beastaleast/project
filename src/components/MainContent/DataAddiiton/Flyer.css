@@ -4,6 +4,7 @@
   background: #f7f9fc;
   color: #333;
   display: flex;
+  justify-content: space-between;
 }
 
 .accordion-section {

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import "./Login1.css";
 import { useSelector, useDispatch } from "react-redux";
 import { Authentication } from "../../../actions/authActions";
+import "./Login1.css";
 
 function Login() {
   const navigate = useNavigate();
@@ -13,7 +13,7 @@ function Login() {
 
   useEffect(() => {
     if (isAuthenticated) {
-      navigate("/home"); // Redirect if already logged in
+      navigate("/home");
     }
   }, [isAuthenticated, navigate]);
 
@@ -23,7 +23,7 @@ function Login() {
       credentials.password === "kanpurggp"
     ) {
       dispatch(Authentication(true));
-      localStorage.setItem("isAuthenticated", "true"); // Store authentication status
+      localStorage.setItem("isAuthenticated", "true");
       setMessage("");
       navigate("/home");
     } else {
@@ -33,13 +33,18 @@ function Login() {
     }
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    checkAuthentication();
+  };
+
   return (
     <div className="login-container">
       <div className="login-header">
         <h1>Welcome to the Good Gut Project</h1>
         <p>Your personalized health and nutrition companion</p>
       </div>
-      <div className="login-form">
+      <form onSubmit={handleSubmit} className="login-form">
         <div className="form-group">
           <label htmlFor="email">Email:</label>
           <input
@@ -51,6 +56,7 @@ function Login() {
             onChange={(e) =>
               setCredentials({ ...credentials, email: e.target.value })
             }
+            required
           />
         </div>
         <div className="form-group">
@@ -64,9 +70,10 @@ function Login() {
             onChange={(e) =>
               setCredentials({ ...credentials, password: e.target.value })
             }
+            required
           />
         </div>
-        <button className="login-btn" onClick={checkAuthentication}>
+        <button type="submit" className="login-btn">
           Log In
         </button>
         {message && <h3 className="error-message">{message}</h3>}
@@ -76,7 +83,7 @@ function Login() {
             Sign Up
           </Link>
         </p>
-      </div>
+      </form>
     </div>
   );
 }
